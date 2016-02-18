@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/unregisteredUsers/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2015 Carola Fanselow Freie Universität Berlin
+  * Distributed under the GNU GPL v2.
+  *
+  * Localization strings for the en_US (U.S. English) locale.
+  -->
+
+<locale name="en_US" full_name="U.S. English">
+
+	<message key="plugins.generic.unregisteredUsers.displayName">Unregistered Users Plugin</message>
+	<message key="plugins.generic.unregisteredUsers.description">Manages unregistered users.</message>
+	<message key="plugins.generic.title.unregisteredUsers">Manage unregistered users</message>
+	<message key="plugins.generic.unregisteredUsers.addUnregisteredGroup">Add user group</message>
+	<message key="plugins.generic.unregisteredUsers.groupName">Group name</message>
+	<message key="plugins.generic.unregisteredUsers.groups.title">Unregistered user groups</message>
+	<message key="plugins.generic.unregisteredUsers.users.title">Unregistered users</message>
+	<message key="plugins.generic.unregisteredUsers.firstName">First name</message>
+	<message key="plugins.generic.unregisteredUsers.lastName">Last name</message>
+	<message key="plugins.generic.unregisteredUsers.email">Email</message>
+	<message key="plugins.generic.unregisteredUsers.ompUsername">OMP username</message>
+	<message key="plugins.generic.unregisteredUsers.users.noneCreated">No users have been created yet.</message>
+	<message key="plugins.generic.unregisteredUsers.groups.noneCreated">No user groups have been created yet.</message>
+	<message key="plugins.generic.unregisteredUsers.groupName">Name</message>
+	<message key="plugins.generic.unregisteredUsers.notes">Notes</message>
+	<message key="plugins.generic.unregisteredUsers.addUnregisteredUser">Add user</message>
+   	<message key="plugins.generic.unregisteredUsers.group.manageUsers.add">Add user</message>
+   	<message key="plugins.generic.unregisteredUsers.group.manageUsers.delete">Remove user</message>
+   	<message key="plugins.generic.unregisteredUsers.showUsers">Show users</message>
+   	<message key="plugins.generic.unregisteredUsers.showGroups">Show groups</message>
+   	<message key="plugins.generic.unregisteredUsers.groupNameRequired">A group name is required</message>
+   	<message key="plugins.generic.unregisteredUsers.firstNameRequired">A first name is required</message>
+   	<message key="plugins.generic.unregisteredUsers.lastNameRequired">A last name is required</message>
+   	<message key="plugins.generic.unregisteredUsers.intro">Add groups or users. Assign/remove users to/from groups in the settings area of the groups.</message>
+   	<message key="plugins.generic.unregisteredUsers.hintImportExport">To import/export groups and users, install the Unregistered Users Import Export Plugin and</message>
+
+   	<message key="plugins.generic.unregisteredUsers.linkToImportExport">click here.</message>
+   	<message key="plugins.generic.unregisteredUsers.inNoGroup"> is not member in any group yet.</message>
+   	<message key="plugins.generic.unregisteredUsers.noUsersInGroup">This group does not have any members yet.</message>
+
+</locale>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

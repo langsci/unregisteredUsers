@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../../lib/pkp/dtd/xmlSchema.dtd">
+
+<!--
+  * schema.xml
+  *
+ * Copyright (c) 2015 Language Science Press
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING. 
+  *
+  * Unregistered users plugin schema in XML.
+  *
+  -->
+
+<schema version="0.2">
+
+	<!--
+	 *
+	 * TABLE langsci_unregistered_users
+	 *
+	 -->
+	<table name="langsci_unregistered_users">
+		<field name="user_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="first_name" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="last_name" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="email" type="C2" size="255"/>
+		<field name="omp_username" type="C2" size="255"/>
+		<field name="notes" type="XL"/>
+		<field name="context_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<descr>List of unregistered users for each context.</descr>
+	</table>
+
+	<!--
+	 *
+	 * TABLE langsci_unregistered_groups
+	 *
+	 -->
+	<table name="langsci_unregistered_groups">
+		<field name="group_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+		<field name="group_name" type="C2" size="255">
+			<NOTNULL/>
+		</field>
+		<field name="notes" type="XL"/>
+		<field name="context_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<descr>List of unregistered groups for each context.</descr>
+	</table>
+
+	<!--
+	 *
+	 * TABLE langsci_unregistered_users_groups
+	 *
+	 -->
+	<table name="langsci_unregistered_users_groups">
+		<field name="user_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="group_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<field name="context_id" type="I8">
+			<NOTNULL/>
+		</field>
+		<descr>List of unregistered users beeing in part of unregistered groups.</descr>
+	</table>
+</schema>

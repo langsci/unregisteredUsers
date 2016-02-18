@@ -1,0 +1,19 @@
+/*
+ * plugins/generic/unregisteredUsers/css/unregisteredUsers.css
+ *
+ * Copyright (c) 2015 Language Science Press
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+*/
+
+.unregisteredUsers td, .unregisteredUsers th {
+	padding: 5px 10px 5px 10px;
+	border: 1px solid #999;
+}
+
+.unregisteredUsers th {
+	font-weight:bold;
+}
+
+
+

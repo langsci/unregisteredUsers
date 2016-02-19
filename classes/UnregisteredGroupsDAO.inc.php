@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/unregisteredUsers/classes/UnregisteredGroupsDAO.inc.php
  *
- * Copyright (c) 2015 Language Science Press
+ * Copyright (c) 2016 Language Science Press
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UnregisteredGroupsDAO
@@ -75,7 +75,7 @@ class UnregisteredGroupsDAO extends DAO {
 	function getGivenUsers($contextId,$unregisteredGroupId) {
 
 		$result = $this->retrieve(
-			' select comb.user_id, users.first_name, users.last_name FROM langsci_unregistered_users_groups comb left join langsci_unregistered_users users ON comb.user_id=users.user_id where comb.group_id='.$unregisteredGroupId.' and comb.context_id='.$contextId.' and users.context_id='.$contextId
+			' select comb.user_id, users.first_name, users.last_name FROM langsci_unregistered_users_groups comb left join langsci_unregistered_users users ON comb.user_id=users.user_id where comb.group_id='.$unregisteredGroupId.' and comb.context_id='.$contextId.' and users.context_id='.$contextId . ' order by users.last_name'
 		);
 
 		if ($result->RecordCount() == 0) {
@@ -85,7 +85,7 @@ class UnregisteredGroupsDAO extends DAO {
 			$users = array();
 			while (!$result->EOF) {
 				$row = $result->getRowAssoc(false);
-				$users[$this->convertFromDB($row['user_id'])] = $this->convertFromDB($row['last_name']).", " .$this->convertFromDB($row['first_name']);
+				$users[$this->convertFromDB($row['user_id'])] = $this->convertFromDB($row['first_name'])." " .$this->convertFromDB($row['last_name']);
 				$result->MoveNext();
 			}
 			$result->Close();
@@ -96,7 +96,7 @@ class UnregisteredGroupsDAO extends DAO {
 	function getNonGivenUsers($contextId,$unregisteredGroupId) {
 
 		$result = $this->retrieve(
-			'select user_id, first_name, last_name from langsci_unregistered_users where context_id='.$contextId.' and user_id not in (select users.user_id from langsci_unregistered_users users left join langsci_unregistered_users_groups comb on users.user_id=comb.user_id where comb.context_id='.$contextId.' and comb.group_id='.$unregisteredGroupId.')'
+			'select user_id, first_name, last_name from langsci_unregistered_users where context_id='.$contextId.' and user_id not in (select users.user_id from langsci_unregistered_users users left join langsci_unregistered_users_groups comb on users.user_id=comb.user_id where users.context_id='.$contextId.' and comb.context_id='.$contextId.' and comb.group_id='.$unregisteredGroupId.') order by last_name'
 		);
 
 		if ($result->RecordCount() == 0) {
@@ -106,7 +106,7 @@ class UnregisteredGroupsDAO extends DAO {
 			$users = array();
 			while (!$result->EOF) {
 				$row = $result->getRowAssoc(false);
-				$users[$this->convertFromDB($row['user_id'])] = $this->convertFromDB($row['last_name']).", " .$this->convertFromDB($row['first_name']);
+				$users[$this->convertFromDB($row['user_id'])] = $this->convertFromDB($row['first_name'])." " .$this->convertFromDB($row['last_name']);
 				$result->MoveNext();
 			}
 			$result->Close();

@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/unregisteredUsers/locale/en_US/locale.xml
   *
-  * Copyright (c) 2015 Carola Fanselow Freie Universität Berlin
-  * Distributed under the GNU GPL v2.
+ * Copyright (c) 2015 Language Science Press
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the en_US (U.S. English) locale.
   -->
@@ -28,19 +28,28 @@
 	<message key="plugins.generic.unregisteredUsers.groupName">Name</message>
 	<message key="plugins.generic.unregisteredUsers.notes">Notes</message>
 	<message key="plugins.generic.unregisteredUsers.addUnregisteredUser">Add user</message>
-   	<message key="plugins.generic.unregisteredUsers.group.manageUsers.add">Add user</message>
-   	<message key="plugins.generic.unregisteredUsers.group.manageUsers.delete">Remove user</message>
-   	<message key="plugins.generic.unregisteredUsers.showUsers">Show users</message>
-   	<message key="plugins.generic.unregisteredUsers.showGroups">Show groups</message>
-   	<message key="plugins.generic.unregisteredUsers.groupNameRequired">A group name is required</message>
-   	<message key="plugins.generic.unregisteredUsers.firstNameRequired">A first name is required</message>
-   	<message key="plugins.generic.unregisteredUsers.lastNameRequired">A last name is required</message>
-   	<message key="plugins.generic.unregisteredUsers.intro">Add groups or users. Assign/remove users to/from groups in the settings area of the groups.</message>
-   	<message key="plugins.generic.unregisteredUsers.hintImportExport">To import/export groups and users, install the Unregistered Users Import Export Plugin and</message>
+  	<message key="plugins.generic.unregisteredUsers.group.manageUsers.add">Add user</message>
+  	<message key="plugins.generic.unregisteredUsers.group.manageUsers.remove">Remove user</message>
+  	<message key="plugins.generic.unregisteredUsers.showUsers">Show users</message>
+  	<message key="plugins.generic.unregisteredUsers.showGroups">Show groups</message>
+  	<message key="plugins.generic.unregisteredUsers.groupNameRequired">A group name is required</message>
+  	<message key="plugins.generic.unregisteredUsers.firstNameRequired">A first name is required</message>
+  	<message key="plugins.generic.unregisteredUsers.lastNameRequired">A last name is required</message>
+  	<message key="plugins.generic.unregisteredUsers.intro">Add groups or users. Assign/remove users to/from groups in the settings area of the groups.</message>
+  	<message key="plugins.generic.unregisteredUsers.hintImportExport">To import/export groups and users, install the Unregistered Users Import Export Plugin and</message>
+  	<message key="plugins.generic.unregisteredUsers.linkToImportExport">click here.</message>
+  	<message key="plugins.generic.unregisteredUsers.inNoGroup"> is not member in any group yet.</message>
+  	<message key="plugins.generic.unregisteredUsers.noUsersInGroup">This group does not have any members yet.</message>
 
-   	<message key="plugins.generic.unregisteredUsers.linkToImportExport">click here.</message>
-   	<message key="plugins.generic.unregisteredUsers.inNoGroup"> is not member in any group yet.</message>
-   	<message key="plugins.generic.unregisteredUsers.noUsersInGroup">This group does not have any members yet.</message>
+  	<message key="plugins.generic.unregisteredUsers.tooltip.editGroup">Edit the group's data.</message>
+  	<message key="plugins.generic.unregisteredUsers.tooltip.addUser">Add a user to this group.</message>
+  	<message key="plugins.generic.unregisteredUsers.tooltip.removeUser">Remove a user from this group.</message>
+  	<message key="plugins.generic.unregisteredUsers.tooltip.showUsers">Show all users of this group.</message>
+  	<message key="plugins.generic.unregisteredUsers.tooltip.removeUser">Remove a user from this group.</message>
+  	<message key="plugins.generic.unregisteredUsers.tooltip.addUnregisteredGroup">Create a new user group.</message>
+  	<message key="plugins.generic.unregisteredUsers.tooltip.editUser">Edit the user's data.</message>
+  	<message key="plugins.generic.unregisteredUsers.tooltip.addUnregisteredUser">Create a new user.</message>
+  	<message key="plugins.generic.unregisteredUsers.tooltip.showGroups">Show all groups this user is a member of.</message>
 
 </locale>
 

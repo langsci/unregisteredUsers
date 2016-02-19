@@ -1,15 +1,13 @@
 {**
  * plugins/generic/unregisteredUsers/templates/unregisteredUsers.tpl
  *
- * Copyright (c) 2015 Language Science Press
+ * Copyright (c) 2016 Language Science Press
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  *}
 
 {strip}
-	{if !$contentOnly}
-		{include file="common/header.tpl"}
-	{/if}
+	{include file="common/header.tpl"}
 {/strip}
 
 <p>{translate key="plugins.generic.unregisteredUsers.intro"}

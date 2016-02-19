@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/unregisteredUsers/classes/UnregisteredUsersGridRow.inc.php
  *
- * Copyright (c) 2015 Language Science Press
+ * Copyright (c) 2016 Language Science Press
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UnregisteredUsersGridRow
@@ -45,7 +45,8 @@ class UnregisteredUsersGridRow extends GridRow {
 						'modal_edit',
 						true),
 					__('grid.action.edit'),
-					'edit'
+					null,
+					__('plugins.generic.unregisteredUsers.tooltip.editUser')
 				)
 			);
 
@@ -74,7 +75,8 @@ class UnregisteredUsersGridRow extends GridRow {
 						'modal_edit',
 						true),
 					__('plugins.generic.unregisteredUsers.showGroups'),
-					'showGroups'
+					null,
+					__('plugins.generic.unregisteredUsers.tooltip.showGroups')
 				)
 			);
 		}

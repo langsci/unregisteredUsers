@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/unregisteredUsers/classes/UnregisteredGroupsGridHandler.inc.php
  *
- * Copyright (c) 2015 Language Science Press
+ * Copyright (c) 2016 Language Science Press
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UnregisteredGroupsGridHandler
@@ -67,7 +67,8 @@ class UnregisteredGroupsGridHandler extends GridHandler {
 					'modal_add_item'
 				),
 				__('plugins.generic.unregisteredUsers.addUnregisteredGroup'),
-				'add_item'
+				null,
+				__('plugins.generic.unregisteredUsers.tooltip.addUnregisteredGroup')
 			)
 		);
 

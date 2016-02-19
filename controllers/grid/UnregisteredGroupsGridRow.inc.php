@@ -3,7 +3,7 @@
 /**
  * @file plugins/generic/unregisteredUsers/classes/UnregisteredGroupsGridRow.inc.php
  *
- * Copyright (c) 2015 Language Science Press
+ * Copyright (c) 2016 Language Science Press
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class UnregisteredGroupsGridRow
@@ -45,7 +45,8 @@ class UnregisteredGroupsGridRow extends GridRow {
 						'modal_edit',
 						true),
 					__('grid.action.edit'),
-					'edit'
+					null,
+					__('plugins.generic.unregisteredUsers.tooltip.editGroup') 
 				)
 			);
 
@@ -67,28 +68,30 @@ class UnregisteredGroupsGridRow extends GridRow {
 			// Create the "add user" action
 			$this->addAction(
 				new LinkAction(
-					'addUsers',
+					'addUser',
 					new AjaxModal(
 						$router->url($request, null, null, 'manageUsers', null, array('unregisteredGroupId' => $unregisteredGroupId,'modus'=>'add')),
-						__('plugins.generic.unregisteredUsers.group.manageUsers.add'),
+						__('plugins.generic.unregisteredUsers.group.manageUsers.add'), // title in the form
 						'modal_edit',
 						true),
-					__('plugins.generic.unregisteredUsers.group.manageUsers.add'),
-					'addUsers'
+					__('plugins.generic.unregisteredUsers.group.manageUsers.add'), // title in the settings area
+					null, 
+					__('plugins.generic.unregisteredUsers.tooltip.addUser') // tooltip
 				)
 			);
-
+//LinkAction($id, &$actionRequest, $title = null, $image = null, $toolTip = null) {
 			// Create the "add user" action
 			$this->addAction(
 				new LinkAction(
-					'deleteUsers',
+					'removeUser',
 					new AjaxModal(
 						$router->url($request, null, null, 'manageUsers', null, array('unregisteredGroupId' => $unregisteredGroupId,'modus'=>'delete')),
-						__('plugins.generic.unregisteredUsers.group.manageUsers.delete'),
+						__('plugins.generic.unregisteredUsers.group.manageUsers.remove'),
 						'modal_edit',
 						true),
-					__('plugins.generic.unregisteredUsers.group.manageUsers.delete'),
-					'deleteUsers'
+					__('plugins.generic.unregisteredUsers.group.manageUsers.remove'),
+					null,
+					__('plugins.generic.unregisteredUsers.tooltip.removeUser')
 				)
 			);
 
@@ -102,7 +105,8 @@ class UnregisteredGroupsGridRow extends GridRow {
 						'modal_edit',
 						true),
 					__('plugins.generic.unregisteredUsers.showUsers'),
-					'showUsers'
+					null,
+					__('plugins.generic.unregisteredUsers.tooltip.showUsers')
 				)
 			);
 		}

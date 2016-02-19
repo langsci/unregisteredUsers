@@ -46,7 +46,6 @@ class DeleteUserFromGroupForm extends Form {
 		import('plugins.generic.unregisteredUsers.classes.UnregisteredGroupsDAO');
 		$unregisteredGroupsDAO = new UnregisteredGroupsDAO();
 		$givenUsers = $unregisteredGroupsDAO->getGivenUsers($this->contextId,$this->unregisteredGroupId);
-		asort($givenUsers);
 		$templateMgr->assign('givenUsers', $givenUsers);
 		$templateMgr->assign('unregisteredGroupId', $this->unregisteredGroupId);
 

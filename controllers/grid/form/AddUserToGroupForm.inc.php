@@ -45,7 +45,6 @@ class AddUserToGroupForm extends Form {
 		import('plugins.generic.unregisteredUsers.classes.UnregisteredGroupsDAO');
 		$unregisteredGroupsDAO = new UnregisteredGroupsDAO();
 		$nonGivenUsers = $unregisteredGroupsDAO->getNonGivenUsers($request->getContext()->getId(),$this->unregisteredGroupId);
-		asort($nonGivenUsers);
 		$templateMgr->assign('nonGivenUsers', $nonGivenUsers);
 		$templateMgr->assign('unregisteredGroupId', $this->unregisteredGroupId);
 

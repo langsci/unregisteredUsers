@@ -103,5 +103,6 @@ Other
 =============
 - does using the plugin require special (background)-knowledge?: no
 - access restrictions: access restricted to admins and managers
+- adds css: no
 
 

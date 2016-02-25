@@ -57,7 +57,7 @@ Database access, server access
 
 - nonrecurring server access: yes
 
-	creating database table during installation (file: schema.xml)
+		creating database table during installation (file: schema.xml)
 
 - recurring server access: no
  
@@ -65,23 +65,23 @@ Classes, plugins, external software
 -----------------------
 - OMP classes used (php): 8
 	
-	GenericPlugin
-	Handler
-	DAO
-	DataObject
-	GridHandler
-	GridRow
-	GridCellProvider
-	Form
+		GenericPlugin
+		Handler
+		DAO
+		DataObject
+		GridHandler
+		GridRow
+		GridCellProvider
+		Form
 
 - OMP classes used (js, jqeury, ajax): 1
 
-	AjaxFormHandler
+		AjaxFormHandler
 
 - necessary plugins: 0
 - optional plugins: 1
 
-	Unregistered Users Import Export Plugin: Import and export of groups and users via csv-file (see file "example.csv")
+		Unregistered Users Import Export Plugin: Import and export of groups and users via csv-file (see file "example.csv")
 
 - use of external software: no
 - file upload: no

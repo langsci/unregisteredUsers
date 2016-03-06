@@ -35,10 +35,19 @@ class UnregisteredUsersHandler extends Handler {
 		$dispatcher = $request->getDispatcher();
 		$unregisteredUsersPlugin = PluginRegistry::getPlugin('generic', UNREGISTEREDUSERS_PLUGIN_NAME);
 
+		// different path for OMP 1.2: management
+		DAORegistry::getDAO('VersionDAO');
+		$versionDao = new VersionDAO();
+		$versionString = $versionDao->getCurrentVersion()->getVersionString();
+		$page = 'manager';
+		if (!strcmp ($versionString,'1.1.1.1')==0) {
+			$page = 'management';
+		}
+
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('pageTitle', 'plugins.generic.title.unregisteredUsers');
-		$templateMgr->assign('url',	$dispatcher->url($request, ROUTE_PAGE, null, 'manager',
-					'importexport', array('plugin', 'UnregUsersImportExportPlugin')));
+		$templateMgr->assign('url',	$dispatcher->url($request, ROUTE_PAGE, null,$page,
+					'importexport', array('plugin', 'UnregisteredUsersIEImportExportPlugin')));
 
 		$templateMgr->display($unregisteredUsersPlugin->getTemplatePath().'unregisteredUsers.tpl');
 	}

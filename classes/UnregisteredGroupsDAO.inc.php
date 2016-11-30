@@ -60,10 +60,10 @@ class UnregisteredGroupsDAO extends DAO {
 			$rowcount=0;
 			while (!$result->EOF) {
 				$row = $result->getRowAssoc(false);
-				$users[$rowcount]['firstName'] = $this->convertFromDB($row['first_name']);
-				$users[$rowcount]['lastName'] = $this->convertFromDB($row['last_name']);
-				$users[$rowcount]['email'] = $this->convertFromDB($row['email']);
-				$users[$rowcount]['ompUsername'] = $this->convertFromDB($row['omp_username']);
+				$users[$rowcount]['firstName'] = $this->convertFromDB($row['first_name'],null);
+				$users[$rowcount]['lastName'] = $this->convertFromDB($row['last_name'],null);
+				$users[$rowcount]['email'] = $this->convertFromDB($row['email'],null);
+				$users[$rowcount]['ompUsername'] = $this->convertFromDB($row['omp_username'],null);
 				$rowcount++;
 				$result->MoveNext();
 			}
@@ -85,7 +85,7 @@ class UnregisteredGroupsDAO extends DAO {
 			$users = array();
 			while (!$result->EOF) {
 				$row = $result->getRowAssoc(false);
-				$users[$this->convertFromDB($row['user_id'])] = $this->convertFromDB($row['first_name'])." " .$this->convertFromDB($row['last_name']);
+				$users[$this->convertFromDB($row['user_id'],null)] = $this->convertFromDB($row['first_name'],null)." " .$this->convertFromDB($row['last_name'],null);
 				$result->MoveNext();
 			}
 			$result->Close();
@@ -106,7 +106,7 @@ class UnregisteredGroupsDAO extends DAO {
 			$users = array();
 			while (!$result->EOF) {
 				$row = $result->getRowAssoc(false);
-				$users[$this->convertFromDB($row['user_id'])] = $this->convertFromDB($row['first_name'])." " .$this->convertFromDB($row['last_name']);
+				$users[$this->convertFromDB($row['user_id'],null)] = $this->convertFromDB($row['first_name'],null)." " .$this->convertFromDB($row['last_name'],null);
 				$result->MoveNext();
 			}
 			$result->Close();

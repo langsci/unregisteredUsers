@@ -35,7 +35,7 @@
 	{/fbvFormArea}
 
 	{fbvFormSection class="formButtons"}
-		{fbvElement type="submit" class="submitFormButton" id=$buttonId label="common.save"}
+		{fbvElement type="submit" class="submitFormButton" id="submitFormButtonUnregisteredGroupForm" label="common.save"}
 	{/fbvFormSection}
 
 </form>

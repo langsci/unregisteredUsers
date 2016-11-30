@@ -1,6 +1,6 @@
 Unregistered Users Plugin for OMP
 
-OMP versions: 1.1.1.1, 1.2
+OMP versions: 1.2
 
 Description:
 
